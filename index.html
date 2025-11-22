@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Santri Berliterasi - Artikel Islami & Literasi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #177d4a;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #0f5633;
+            color: white;
+            padding: 8px 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .content {
+            flex: 3;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            background: #e0f3e9;
+            color: #177d4a;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+
+        .judul-artikel {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: #222;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 13px;
+            color: #177d4a;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .sidebar p {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Santri Berliterasi</h1>
+        <p>Ruang tulisan santri untuk merawat ilmu, adab, dan literasi.</p>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Artikel</a>
+        <a href="#">Tausiyah</a>
+        <a href="#">Tentang</a>
+        <a href="#">Kontak</a>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <div class="container">
+        <div class="content">
+            <!-- ARTIKEL 1 -->
+            <div class="card">
+                <span class="tag">Motivasi Belajar</span>
+                <h2 class="judul-artikel">Menjaga Semangat Belajar di Pesantren</h2>
+                <p class="meta">Ditulis oleh: Admin SantriLiterasi • 22 November 2025</p>
+
+                <p>
+                    Di tengah padatnya jadwal mengaji, sekolah formal, dan kegiatan harian di pesantren, 
+                    kadang semangat belajar bisa naik turun. Itu manusiawi. Namun, seorang santri dituntut 
+                    untuk terus berusaha menjaga niat dan semangatnya.
+                </p>
+                <p>
+                    Salah satu cara menjaga semangat adalah selalu memperbarui niat. Belajar bukan sekadar 
+                    mengejar nilai, tapi menuntut ilmu karena Allah. Dengan niat yang benar, lelah terasa 
+                    lebih ringan, waktu terasa lebih berkah.
+                </p>
+                <p>
+                    Selain itu, pilih teman yang saling menguatkan. Lingkungan yang baik akan mendorong kita 
+                    untuk terus membaca, menulis, dan berpikir kritis. Dari situlah lahir budaya literasi 
+                    di kalangan santri.
+                </p>
+
+                <a href="#" class="read-more">Baca selengkapnya...</a>
+            </div>
+
+            <!-- ARTIKEL 2 (contoh artikel lain) -->
+            <div class="card">
+                <span class="tag">Literasi</span>
+                <h2 class="judul-artikel">Mengapa Santri Perlu Menulis?</h2>
+                <p class="meta">Ditulis oleh: Santri Tamu • 20 November 2025</p>
+
+                <p>
+                    Menulis adalah cara merapikan pikiran. Banyak ulama besar yang meninggalkan jejak ilmu 
+                    bukan hanya melalui lisan, tapi melalui karya tulis yang bertahan ratusan tahun.
+                </p>
+
+                <a href="#" class="read-more">Baca selengkapnya...</a>
+            </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="card">
+                <h3>Tentang Santri Berliterasi</h3>
+                <p>
+                    SantriBerliterasi adalah ruang berbagi tulisan, renungan, dan gagasan para santri 
+                    tentang ilmu, adab, dan kehidupan.
+                </p>
+                <p>
+                    Insya Allah, sedikit demi sedikit kita membangun budaya membaca dan menulis.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Kategori</h3>
+                <p>• Motivasi Santri</p>
+                <p>• Fikih Kehidupan</p>
+                <p>• Catatan Ngaji</p>
+                <p>• Resensi Buku</p>
+                <p>• Opini & Esai</p>
+            </div>
+
+            <div class="card">
+                <h3>Kontak & Kontribusi</h3>
+                <p>Ingin kirim artikel?</p>
+                <p>Email: santriliterasi@example.com</p>
+            </div>
+        </aside>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Santri Beliterasi. Dibangun dengan semangat belajar dan berbagi.
+    </div>
+</body>
+</html>
