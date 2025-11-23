@@ -12,22 +12,28 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: #bfbfbf;
             line-height: 1.6;
         }
 
+        /* HEADER */
         header {
-            background: #177d4a;
+            background: #063b2f; 
             color: white;
-            padding: 20px 15px;
+            padding: 25px 15px;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         header h1 {
-            font-size: 28px;
-            margin-bottom: 5px;
+            font-size: 26px;
+            margin-bottom: 6px;
         }
 
         header p {
@@ -35,30 +41,34 @@
             opacity: 0.9;
         }
 
+        /* NAVBAR */
         nav {
-            background: #0f5633;
+            background: #063b2f;
             color: white;
-            padding: 8px 15px;
+            padding: 12px;
             text-align: center;
-            font-size: 14px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
         }
 
         nav a {
             color: white;
-            margin: 0 8px;
+            margin: 0 15px;
+            font-weight: bold;
             text-decoration: none;
+            font-size: 15px;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
+        /* LAYOUT */
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
+            max-width: 1150px;
+            margin: 40px auto;
             padding: 0 15px;
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
         .content {
@@ -68,46 +78,64 @@
         .sidebar {
             flex: 1;
         }
-   .card {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
 
-    .tag {
-            display: inline-block;
-            font-size: 12px;
-            background: #e0f3e9;
-            color: #177d4a;
-            padding: 3px 8px;
-            border-radius: 20px;
-            margin-bottom: 8px;
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 22px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+
+            /* ANIMASI DEFAULT */
+            opacity: 0;
+            transform: translateY(30px);
+            filter: blur(4px);
+            transition: 
+                opacity 0.6s ease-out,
+                transform 0.6s ease-out,
+                filter 0.6s ease-out;
         }
 
+        /* CARD MUNCUL */
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0);
+        }
+
+        /* TAG */
+        .tag {
+            display: inline-block;
+            font-size: 13px;
+            background: #dff7e5;
+            color: #177d4a;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* JUDUL */
         .judul-artikel {
-            font-size: 22px;
-            margin-bottom: 8px;
+            font-size: 26px;
+            margin-bottom: 12px;
             color: #222;
         }
 
         .meta {
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 15px;
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 20px;
         }
 
         .card p {
-            margin-bottom: 10px;
-            font-size: 14px;
+            margin-bottom: 15px;
+            font-size: 15px;
             color: #444;
         }
 
         .read-more {
-            display: inline-block;
-            margin-top: 5px;
-            font-size: 13px;
+            font-weight: bold;
             color: #177d4a;
             text-decoration: none;
         }
@@ -116,24 +144,27 @@
             text-decoration: underline;
         }
 
+        /* SIDEBAR */
         .sidebar h3 {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #333;
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #222;
+            font-weight: bold;
         }
 
         .sidebar p {
-            font-size: 13px;
-            color: #555;
+            font-size: 14px;
+            color: #444;
             margin-bottom: 8px;
         }
 
+        /* FOOTER */
         .footer {
             text-align: center;
             padding: 15px;
             font-size: 12px;
-            color: #777;
-            margin-top: 20px;
+            color: #444;
+            margin-top: 30px;
         }
 
         @media (max-width: 768px) {
@@ -143,8 +174,10 @@
         }
     </style>
 </head>
+
 <body>
-  <!-- HEADER -->
+
+    <!-- HEADER -->
     <header>
         <h1>Santri Berliterasi</h1>
         <p>Ruang tulisan santri untuk merawat ilmu, adab, dan literasi.</p>
@@ -162,6 +195,7 @@
     <!-- KONTEN UTAMA -->
     <div class="container">
         <div class="content">
+
             <!-- ARTIKEL 1 -->
             <div class="card">
                 <span class="tag">Motivasi Belajar</span>
@@ -173,21 +207,17 @@
                     kadang semangat belajar bisa naik turun. Itu manusiawi. Namun, seorang santri dituntut 
                     untuk terus berusaha menjaga niat dan semangatnya.
                 </p>
+
                 <p>
                     Salah satu cara menjaga semangat adalah selalu memperbarui niat. Belajar bukan sekadar 
                     mengejar nilai, tapi menuntut ilmu karena Allah. Dengan niat yang benar, lelah terasa 
                     lebih ringan, waktu terasa lebih berkah.
                 </p>
-                <p>
-                    Selain itu, pilih teman yang saling menguatkan. Lingkungan yang baik akan mendorong kita 
-                    untuk terus membaca, menulis, dan berpikir kritis. Dari situlah lahir budaya literasi 
-                    di kalangan santri.
-                </p>
 
                 <a href="#" class="read-more">Baca selengkapnya...</a>
             </div>
 
-            <!-- ARTIKEL 2 (contoh artikel lain) -->
+            <!-- ARTIKEL 2 -->
             <div class="card">
                 <span class="tag">Literasi</span>
                 <h2 class="judul-artikel">Mengapa Santri Perlu Menulis?</h2>
@@ -200,18 +230,17 @@
 
                 <a href="#" class="read-more">Baca selengkapnya...</a>
             </div>
+
         </div>
 
         <!-- SIDEBAR -->
         <aside class="sidebar">
+
             <div class="card">
                 <h3>Tentang Santri Berliterasi</h3>
                 <p>
                     SantriBerliterasi adalah ruang berbagi tulisan, renungan, dan gagasan para santri 
                     tentang ilmu, adab, dan kehidupan.
-                </p>
-                <p>
-                    Insya Allah, sedikit demi sedikit kita membangun budaya membaca dan menulis.
                 </p>
             </div>
 
@@ -229,18 +258,29 @@
                 <p>Ingin kirim artikel?</p>
                 <p>Email: santriliterasi@example.com</p>
             </div>
+
         </aside>
     </div>
 
     <div class="footer">
-        &copy; 2025 Santri Beliterasi. Dibangun dengan semangat belajar dan berbagi.
+        &copy; 2025 Santri Berliterasi. Dibangun dengan semangat belajar dan berbagi.
     </div>
+
+    <!-- ANIMASI SCROLL SCRIPT -->
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        cards.forEach(card => observer.observe(card));
+    </script>
+
 </body>
-
 </html>
-
-
-
-
-
-
