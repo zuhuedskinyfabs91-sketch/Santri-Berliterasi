@@ -127,6 +127,16 @@
             color: #222;
         }
 
+        /* styling untuk link di dalam judul */
+        .judul-artikel a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .judul-artikel a:hover {
+            text-decoration: underline;
+        }
+
         .meta {
             font-size: 13px;
             color: #555;
@@ -205,7 +215,11 @@
             <!-- ARTIKEL 1 -->
             <div class="card">
                 <span class="tag">Motivasi Belajar</span>
-                <h2 class="judul-artikel">Menjaga Semangat Belajar di Pesantren</h2>
+                <h2 class="judul-artikel">
+                    <a href="artikel-detail.html?slug=menjaga-semangat-belajar-di-pesantren">
+                        Menjaga Semangat Belajar di Pesantren
+                    </a>
+                </h2>
                 <p class="meta">Ditulis oleh: Admin SantriLiterasi • 22 November 2025</p>
 
                 <p>
@@ -226,7 +240,11 @@
             <!-- ARTIKEL 2 -->
             <div class="card">
                 <span class="tag">Literasi</span>
-                <h2 class="judul-artikel">Mengapa Santri Perlu Menulis?</h2>
+                <h2 class="judul-artikel">
+                    <a href="artikel-detail.html?slug=mengapa-santri-perlu-menulis">
+                        Mengapa Santri Perlu Menulis?
+                    </a>
+                </h2>
                 <p class="meta">Ditulis oleh: Santri Tamu • 20 November 2025</p>
 
                 <p>
@@ -260,19 +278,17 @@
             </div>
 
             <div class="card">
-               <div class="card">
-    <h3>Kontak & Kontribusi</h3>
-    <p>Ingin kirim artikel?</p>
+                <h3>Kontak & Kontribusi</h3>
+                <p>Ingin kirim artikel?</p>
 
-    <p>Email: santriberliterasi@gmail.com</p>
+                <p>Email: santriberliterasi@gmail.com</p>
 
-    <!-- Tambahkan WhatsApp -->
-<p>WhatsApp:
-    <a href="https://wa.me/6285649223084" target="_blank">
-        0856-4922-3084
-    </a>
-</p>               
-</div>
+                <p>WhatsApp:
+                    <a href="https://wa.me/6285649223084" target="_blank">
+                        0856-4922-3084
+                    </a>
+                </p>               
+            </div>
 
         </aside>
     </div>
